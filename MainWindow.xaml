@@ -1,0 +1,48 @@
+﻿<!--<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CyberInvasion.OwnVersion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+    </Grid>
+</Window>-->
+
+<Window x:Class="CyberInvasion.OwnVersion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CyberInvasion.OwnVersion"
+        Title="MainWindow" Width="1366" Height="1024">
+    <Grid>
+        <Canvas KeyDown="GameCanvas_KeyDown" KeyUp="GameCanvas_KeyUp" Name="GameCanvas" Focusable="true"
+            Background="LightBlue">
+            <Rectangle Name="background1" Fill="LightGreen" Width="1366" Height="1024"/>
+            <Rectangle Name="gameLogo" Width="640" Height="480" Fill="Brown" Canvas.Top="271" Canvas.Left="366"/>
+            <Rectangle Name="nc3logo" Width="301" Height="173" Canvas.Left="1047" Canvas.Top="10"/>
+            <Rectangle Name="nc3SpriteObject_player" Width="328" Height="237" Canvas.Left="489" Canvas.Top="756"/>
+            <Rectangle Name="nc3SpriteObject_bullet" Width="53" Height="153" Canvas.Left="1431" Canvas.Top="921"
+                 Visibility="Hidden"/>
+            <Rectangle Name="nc3SpriteObject_enemy1" Width="211" Height="228" Canvas.Left="1431" Canvas.Top="921"/>
+            <Rectangle Name="nc3SpriteObject_enemy2" Width="189" Height="219" Canvas.Left="1431" Canvas.Top="921"/>
+            <Rectangle Name="nc3SpriteObject_enemy3" Width="180" Height="200" Canvas.Left="1431" Canvas.Top="921"/>
+            <Rectangle Name="nc3SpriteObject_enemy4" Width="160" Height="220" Canvas.Left="1431" Canvas.Top="921"/>
+            <TextBlock Name="CurrentScoreText" FontSize="48" Background="#00000000" Foreground="#FF972B2B"
+                 FontFamily="Verdana" FontWeight="Bold" Canvas.Left="51" TextWrapping="Wrap" Canvas.Top="145"
+                 Height="170" Width="1254" Opacity="0.75" RenderTransformOrigin="0.5,0.5">
+        <UIElement.RenderTransform>
+          <TransformGroup>
+            <ScaleTransform/>
+            <SkewTransform AngleY="3.501"/>
+            <RotateTransform Angle="10.85"/>
+            <TranslateTransform Y="24.717"/>
+          </TransformGroup>
+        </UIElement.RenderTransform>
+            </TextBlock>
+        </Canvas>
+    </Grid>
+</Window>
